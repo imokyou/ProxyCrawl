@@ -1,0 +1,43 @@
+# coding=utf8
+
+# coding=utf8
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)s:%(levelname)s %(message)s')
+
+REDIS = {
+    'host': 'localhost',
+    'port': 6379,
+    'password': '',
+    'db': 1
+}
+
+# 下载器的超时时间，单位秒(s)
+DOWNLOAD_TIMEOUT = 5
+
+# 下载器重试次数
+DOWNLOAD_RETRY_TIMES = 3
+
+# 抓取模式, normal普通，proxy代理，mix混合(普通加代理)
+CRAWL_MODE = 'mix'
+
+# 抓取的gevent池大小
+CRAWL_WORKER_THREAD_NUM = 4
+
+# 代理获取接口，大像代理，你值得拥有
+DAXIANG_PROXY_API = ''
+
+# 测试代理有效性的地址，基本上随便一个国内网址即可
+HTTP_TEST_API = 'http://www.baidu.com/'
+HTTPS_TEST_API = 'https://www.baidu.com/'
+
+# 代理爬取间隔，单位秒(s)
+CRAWL_PAGE_SLEEP = 60 * 5
+
+# 代理检测超时时间，单位秒(s)
+CHECK_TIMEOUT = 5
+
+# 代理检查器间隔，单位秒(s)
+PROXY_CHECKER_SLEEP = 60 * 2
+
+
